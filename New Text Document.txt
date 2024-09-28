@@ -1,0 +1,1012 @@
+'''str="happy_coding"
+print(str[1])
+name="poo"
+age=21
+x=2.34567
+print("name:",name,"age:",age)
+print("%.3f"%x)
+print("{:.2f}".format(x))
+print(f"{x:.4f}")
+
+name="ku"
+address="Bellary"
+print("i am from{},and it in {}".format(name,address))
+
+name="ku"
+age=18
+print("My name is {1},and im {0}".format(name,age))
+x=9
+print("{:05}".format(x))
+
+n=int(input("enetr the value:"))
+fact=1
+while(n>0):
+    fact=fact*n
+    n=n-1
+    print(fact)
+def reverse(n):
+    if(n>0):
+        reverse(n-1)
+        print(n)
+reverse(10)   
+
+def turn_page(num_pages):
+    for page in range(1,num_pages+1):
+        print(f"turning to page {page}")
+total_pages=10
+turn_page(total_pages)
+
+a,b=map(int,input("enetr the value:").split())
+at=b//2
+bt=a//2-b//2
+print(at)
+print(bt)
+print(min(at,bt))
+
+def digit(n):
+    dig=0
+    while(n>0):
+        d=n%10
+        dig+=1
+        n//=10
+        print(dig)
+n=int(input())
+digit(n)
+
+li=[1,2,3,4,5]
+li.append([6,7,8])
+print(li)
+
+li=[1,9,3,7,5]
+print(li.count(6))
+print(li)
+
+li=[1,2,3,4,5]
+new_li=sorted(li)
+print(li)
+print([5,6,7,5])
+
+li=[1,2,3,4,5]
+li.sort()
+print(li.pop())
+
+li=[1,9,3,7,5]
+x=li.count(7)
+print(x)
+str='happy coding'
+print(str[0:8:1])
+print(str)
+
+output= I am from 'BITS' and it is in 'bellary'
+print('I am from \"BITS\" and it is in \'Bellary\' ')
+
+a= '3'
+b='4'
+print(a+b)
+
+a="BITM"
+b="453"
+print(a!=b)
+
+print("I am from %s" %a)
+
+
+str=input()
+str[::-1]
+rev_str=str[::-1]
+print("str is palindrome"if(str==rev_str)else"not palindrome")
+li=[1,4,5,7,5]
+print(li.sort())
+print(li)
+print(max(li))
+print(li)
+print(min(li))
+print(li)
+total=sum(li)
+print(total)
+print(li)
+li.append(11)
+print(li)
+print(li.pop())
+print(li)
+li.insert(6,9)
+print(li)
+li.remove(5)
+print(li)
+li.insert(0,9)
+print(li)
+print(li.count(9))
+print(li)
+li.reverse()
+print(li)
+li=[2,5,6,8]
+print([i**3 for i in li])
+
+li=[2,4,6,8]
+print(8  not in li)
+li=[2,4,6,8]
+list2=[2,5,6,8]
+list=li
+print(list is li)
+print(id(li))
+print(id(list))
+print(li.sort())
+print(li)
+li.remove(max(li))
+print(max(li))
+
+li.remove(min(li))
+print(min(li))
+
+n=int(input())
+for i in range(5):
+    for j in range(5):
+        if(i>=j):
+            print("*",end=" ")
+        else:
+            print("")
+def pattern(n):
+    for i in range(1,n+1):
+        print("*"*i)
+pattern(6)
+
+def pattern(n):
+    for i in range(n,0,-1):
+        print("*"*i)
+pattern(6)
+
+li=[[1,2,3],[4,6,7],[8,9,5]]
+l=0
+for r in range(3):
+    for c in range(3):
+        if(c<r):
+            l+=li[r][c]
+print(l)
+
+set={0,1,2,3,4,5,6}
+set.add(7)
+print(set)
+set.remove(3)
+print(set)
+
+set={0,1,2,3,4,5,6}
+set1={4,8,3,9}
+us=set.intersection(set1)
+intersection_set=set.intersection(set1)
+print(us)
+print(intersection_set)
+
+cse={"id":1,"ph":7687}
+print(cse)
+del cse["ph"]
+print(cse)
+cse.clear()
+print(cse)
+
+num=7
+if(num==1):
+    print("neither prime nor com")
+elif(num>1):
+    for i in range(2,num):
+        if(num%2==0):
+            print("prime")
+        else:
+            print(" not prime")
+
+x,y=5,20
+for i in range(x,y+1):
+    for j in range(2,i-1):
+        if(i%j==0):
+            break
+        else:
+            print(i)
+a=lambda x:x**2
+print(a(5))
+
+a=lambda x,y,z:max(x,y,z)
+print(a(5,7,5))
+
+
+a=lambda x:"even" if(x%2==0) else "odd"
+print(a(int(input())))
+
+
+
+a=lambda x:b[::-1]
+b=input("enetr name")
+print(a(b))
+
+
+b=['apple','ball','cat']
+a=map(lambda x:x.upper(),b)
+print(list(a))
+
+
+b=[1,2,3,4]
+c=[4,5,6,7]
+a=map(lambda x,y:x+y,b,c)
+print(list(a))
+
+m=["apple","ball","act"]
+a=map(lambda x:len(x),m)
+print(list(a))
+
+from functools import reduce
+m=["1","2","3","4"]
+a=reduce(lambda x,y:x+y,m)
+print(a)
+from functools import reduce
+m=[4,2,3,1]
+a=reduce(lambda x,y:max(x,y),m)
+print(a)
+
+from functools import reduce
+m=[4,2,-3,1]
+a=filter(lambda x:x<0,m)
+print(list(a))
+
+from functools import reduce
+m=['pen','pencil','apple','loin']
+a=filter(lambda x:len(x)>4,m)
+print(list(a))
+
+from functools import reduce
+n=["pop","poo","lol","lion"]
+a=filter(lambda x:x==x[::-1],n)
+print(list(a))
+
+li=[1,2,3,4],[1,2,3,4]
+print([sum(i) for i in zip(*li)])
+
+li1=[1,2,3,4]
+li2=[1,2,3,4]
+sum=[(li1(i)+li2(j)) for i in range (len(li1))
+     for j in range (len(li2)) if(i==j)]
+print(sum)
+
+a,b=20,-18
+x,y=a,b
+while(b>0):
+    r=a%b
+    a=b
+    b=r
+print(abs(a))
+lcm=abs(x*y//a)
+print(lcm)
+
+
+try:
+    print("file opened")
+    a=int(input())
+    b=int(input())
+    sum=a+b
+    print(sum)
+    print("file closed")
+except Exception as ex:
+    print("error occured",ex)
+finally:
+    print("file closed finally")
+
+class Student:
+    def __init__(self,name,age,branch,year):
+        self.name=name
+        self.age=age
+        self.branch=branch
+        self.year=year
+    def __str__(self):
+        return(f"Student Name: {self.name}\n"
+           f"Student Age: {self.age}\n"
+           f"Branch: {self.branch}\n"
+           f"Year: {self.year}")
+
+
+student1=Student('poo','19','cse',2020)
+student2=Student('boo','19','cse',2020)
+print(student1)
+print(student2)
+
+
+def fun(n=6):
+    sum=0
+for i in range(1,6):
+        if(6%1==0):
+              sum+=i
+print("perfect number" if(sum==6) else "no")'''
+
+from  collections import Counter
+x=int(input())
+y=list(map(int,input().split()))
+vote=Counter(y)
+max_vote=vote.most_common()[0][0]
+max=vote.most_common()
+if len(max)>1 and max[0][1]==max[1][1]:
+    print("-1")
+else:
+    print(max_vote)
+
+
+li=[2,7,11,15]
+print(li[0]+li[1])
+li=[2,7,11,15]
+for i in li:
+    for j in li:
+        if(li[i]+li[j]==9):
+            print(li[i],li[j])
+
+li=[0,1,0,4,3]
+for i in li:
+    if(li[i]==0):
+        li.remove[i]
+        li.append(0)
+
+n=list(map(int,input().split()))
+for i in n:
+    if(i==0):
+        n.remove(i)m
+        n.append(i)
+print(n)
+
+n=[0,2,4,5]
+for i in range(max(n)+1):
+    if  i not in n:
+        print(i)
+
+n=list(map(int,input().split()))
+seq=max(n)*(max(n)+1)//2
+sum=sum(n)
+print(seq-sum)
+
+n=list(map(int,input().split()))
+sum=0
+for i in n:
+    sum+=i
+print(sum)'''
+
+a=int(input())
+b=int(input())
+print(a+b)
+
+li=[1,2,3,4,5]
+k=li[-3::]=li[0:-3]
+print(k)
+
+li=[1,2,3,4,5,6,7]
+k=li[-4::]=li[0:-4]
+print(k)
+
+singly linked list=
+
+class Node:
+    def __init__(self,value):
+        self.value=value
+        self.next=None
+class LinkedList:
+    def __init__(self):
+        self.head=None
+
+    def adding_end(self,value):
+        new_node=Node(value)
+        if not self.head:
+            self.head=new_node
+            return
+        last_node=self.head
+        while last_node.next:
+            last_node=last_node.next
+        last_node.next=new_node
+
+    def add_element_begining(self,value):
+        new_node=Node(value)
+        new_node.next=self.head
+        self.head=new_node 
+
+    def add_ele_index(self,index,value):
+        if index==0:
+            self.add_element_begining(value)
+            return
+        new_node=Node(value)
+        current=self.head
+        count=0
+        while current is not None and count<index-1:
+            current=current.next
+            count+=1
+        if current is None:
+            print(index,":index out of range")
+            return
+        new_node.next=current.next
+        current.next=new_node
+
+    def delete_ele(self,value):
+        if self.head is None:
+            print("list is empty")
+            return
+        if self.head.value==value:
+            self.head=self.head.next
+            return
+        current=self.head
+        while current.next and current.next.value !=value:
+            current=current.next
+        if current.next is None:
+            print("element{value}not found")
+        else:
+            current.next=current.next.next
+
+    
+    def delete_ele_index(self,index):
+        if self.head is None:
+            print("list is empty")
+            return
+        if index==0:
+            self.head=self.head.next
+            return
+        current=self.head
+        count=0
+        while current and count<index-1:
+            current=current.next
+            count+=1
+        if current is None or current.next is None:
+            print("index {index} out of range")
+        else:
+            current.next=current.next.next
+
+    def pop(self):
+        if self.head is None:
+            print("list is empty,nothing to pop")
+            return None
+        if self.head.next is None:
+            value=self.head.value
+            self.head=None
+            return value
+        current=self.head
+        while current.next.next:
+            current=current.next
+        value=current.next.value
+        current.next=None
+        return value    
+                    
+    def traversal(self):
+        current_node=self.head
+        while current_node:
+            print(current_node.value,end="->")
+            current_node=current_node.next
+        print("no more elements")
+
+
+L1=LinkedList()
+L1.adding_end(2)
+L1.adding_end(5)
+L1.traversal()
+L1.add_element_begining(10)
+L1.add_element_begining(20)
+L1.add_element_begining(30)
+L1.traversal()
+L1.add_ele_index(2,3)
+L1.traversal()
+L1.delete_ele(30)
+L1.traversal()
+L1.delete_ele_index(1)
+L1.traversal()
+y=L1.pop()
+print("poppped element:",y)
+y=L1.pop()
+print("poppped element:",y)
+L1.traversal()
+
+
+class Node:
+    def __init__(self,value):
+        self.value=value
+        self.next=None
+class Queue:
+    def __init__(self):
+        self.head=None
+
+    def adding_ele_end(self,value):
+        new_node=Node(value)
+        if not self.head:
+            self.head=new_node
+            return
+        last_node=self.head
+        while last_node.next:
+            last_node=last_node.next
+        last_node.next=new_node
+
+    def delete_ele_index(self,index):
+       
+        if index==0:
+            self.head=self.head.next
+            return
+        elif self.head is None:
+            print("list is empty")
+            return
+    def traversal(self):
+        current_node=self.head
+        while current_node:
+            print(current_node.value,end="->")
+            current_node=current_node.next
+        print("no more elements")
+        
+
+L1=Queue()
+L1.adding_ele_end(2)
+L1.adding_ele_end(5)
+L1.adding_ele_end(2)
+L1.adding_ele_end(5)
+L1.traversal()
+L1.delete_ele_index(0)
+L1.traversal()
+
+stack=[]
+stack.append('a')
+stack.append('b')
+stack.append('c')
+print(stack)
+print(stack.pop())
+print(stack)
+print(stack.pop())
+print(stack)
+print(stack.pop())
+print(stack)
+
+Queue=[]
+Queue.append('a')
+Queue.append('b')
+Queue.append('c')
+print(Queue)
+print(Queue.pop(0))
+print(Queue)
+print(Queue.pop(0))
+print(Queue)
+print(Queue.pop(0))
+print(Queue)
+
+from collections import deque
+stack=deque()
+stack.append('a')
+stack.append('b')
+stack.append('c')
+print(stack)
+print(stack.pop())
+print(stack)
+print(stack.pop())
+print(stack)
+print(stack.pop())
+print(stack)
+
+from queue import LifoQueue
+stack=LifoQueue(maxsize=2)
+stack.put(1)
+stack.put(3)
+result=list(stack.queue)
+print(result)
+print(stack.full())
+print(stack.get())
+print(stack.get())
+print(stack.empty())
+
+from queue import LifoQueue
+y=LifoQueue(maxsize=5)
+y.put("we")
+y.put("arte")
+y.put("w")
+y.put("in")
+y.put("m")
+print(list(y.queue))
+y.get()
+print(list(y.queue))
+y.get()
+
+
+
+def balance_paranthesis(exp):
+    stack=[]
+    pair={']':'[','}':'{',')':'('}
+
+    for i in exp:
+        if i in '[{(':
+            stack.append(i)
+        elif i in '}])':
+            if not stack or stack.pop() !=pair[i]:
+                return False
+    return not stack                
+exp='{[()]}'
+print("balanced" if balanced_paranthesis(exp)else "not balanced")
+
+
+
+class Node:
+    def __init__(self,value):
+        self.value=value
+        self.left=None
+        self.right=None
+
+class BST:
+    def __init__(self):
+        self.root=None
+
+    def insert(self,value):
+        if self.root is None:
+            self.root=Node(value)
+        else:
+            self._insert(self.root,value)   
+
+    def _insert(self,current_node,value):
+        if value<current_node.value:
+            if current_node.left is None:
+                current_node.left=Node(value)
+            else:
+                self._insert(current_node.left,value)
+        elif value>current_node.value:
+            if current_node.right is None:
+                current_node.right=Node(value)
+            else:
+                self._insert(current_node.right,value)    
+        else:
+            pass
+    def inorder(self):
+        return self._inorder(self.root,[])
+    def _inorder(self,current_node,result):
+        if current_node:
+            self._inorder(current_node.left,result)
+            result.append(current_node.value)
+            self._inorder(current_node.right,result)
+        return result
+
+    
+bst=BST()
+bst.insert(10)
+bst.insert(5)
+bst.insert(15)
+bst.insert(2)
+bst.insert(7)
+print("inorder traversal:",bst.inorder())
+    
+    
+
+
+def rotate(nums1,k):
+    n=len(nums1)
+    if n==0:
+        return nums1
+    k%=n
+    nums1[:]=nums1[-k:]+nums1[:-k]
+nums1=[1,2,3,4,5,6,7]
+rotate(nums1,3)   
+print(nums1)
+
+s1='mat'
+s2='atm'
+if sorted(s1)==sorted(s2):
+    print('yes')
+else:
+    print('no')
+
+s='Hello@5924'
+c=0
+sum=0
+r=''
+for i in s:
+  if(i.isdigit()):
+     sum=sum+int(i)
+     r=r+i
+     c+=1
+print(c)
+print(sum)
+print(r[::-1])
+
+class Employee:
+    def __init__(self,eid,name,des,salary):
+        self.eid=eid
+        self.name=name
+        self.des=des
+        self.salary=salary
+    def display(self):
+        print("id is:",self.eid)
+        print("name is:",self.name)
+        print("des is:",self.des)
+        print("salary is:",self.salary)
+        print()
+e1=Employee("110","poo","pyhton dev","25000.12")
+e2=Employee("110","poo","pyhton dev","25000.12")
+e1.display()
+e2.display()'''
+
+
+
+
+
+
+
+class Employee:
+    def __init__(self):
+        self.eid=100
+        self.name="poo"
+        self.des="eng cse"
+        self.salary=20000
+    def display(self):
+        print("id is:",self.eid)
+        print("name is:",self.name)
+        print("des is:",self.des)
+        print("salary is:",self.salary)
+        print()
+e1=Employee()
+e1.display()
+
+//using parameter//
+
+class Student:
+    def __init__(self,sid,name,branch,phoneno,address):
+        self.sid=sid
+        self.name=name
+        self.branch=branch
+        self.phoneno=phoneno
+        self.address=address
+    def display(self):
+        print("id is:",self.sid)
+        print("name is:",self.name)
+        print("branch is:",self.branch)
+        print("phoneno is:",self.phoneno)
+        print("address is:",self.address)
+e1=Student("110","poo","cse","1212435643","herur")
+e2=Student("120","boo","cse","250001246","bellary")
+e1.display()
+e2.display()
+
+//without parameters//
+
+class Student:
+    def __init__(self):
+        self.sid=61
+        self.name='poo'
+        self.branch='cse'
+        self.phoneno=1234567890
+        self.address='herur'
+    def display(self):
+        print("id is:",self.sid)
+        print("name is:",self.name)
+        print("branch is:",self.branch)
+        print("phoneno is:",self.phoneno)
+        print("address is:",self.address)
+e1=Student()
+e1.display()
+
+class Student:
+    def __init__(self):
+         self.sid=61
+         self.name='poo'
+         self.salary=45000
+    def display(self):
+        print("id is:",self.sid)
+        print("name is:",self.name)
+        print("salary is:",self.salary)
+    def hike(self):
+        h=(30*self.salary)/100
+        total=self.salary+h
+        return total
+e1=Student()
+print(e1.sid,e1.name,e1.salary)
+print(e1.hike())
+
+s=50
+s1=40
+print(f'the cost of pen is{s} and pencil is{s1}')
+
+class Parent:
+    def p1():
+        print("I amm parent class method")
+
+class Child(Parent):
+    def c1():
+        print("I am child class method")
+c=Child
+c.p1()
+c.c1() 
+
+class Parent1:
+    def p1():
+        print("I amm parent class method")
+
+class Parent2:
+    def p2():
+        print("helo")
+
+class Child(Parent1,Parent2):
+    def c1():
+        print("I am child class method")
+c=Child
+c.p1()
+c.p2()
+c.c1()
+
+class GrandParent:
+    def gp():
+        print("I amm grandparent")
+
+class Parent(GrandParent):
+    def p():
+        print("helo")
+
+class Child(Parent):
+    def c():
+        print("I am child class method")
+obj2=Child
+obj2.gp()
+obj2.p()
+obj2.c()
+    
+class Parent:
+    def p():
+        print("I amm grandparent")
+
+class Child1(Parent):
+    def c1():
+        print("helo")
+
+class Child2(Parent):
+    def c2():
+        print("I am child class method")
+obj2=Child2
+obj2.p()
+obj2.c2()
+o=Child1
+o.p()
+o.c1()'''
+''''
+from abc import ABC
+class Vehicle():
+    def millage():
+        pass
+    def speed():
+        pass
+    def price():
+        print("20k")
+class Fortuner(Vehicle):
+    def millage():
+        print("26kmph")
+    def speed():
+        print("350 max speed")
+        
+fo=Fortuner
+fo.millage()
+fo.speed() 
+fo.price()
+
+class Data:
+    __name="poo"
+    _age=26
+    address="herur"
+obj=Data
+print(obj.address)
+print(obj._age)
+print(obj.__name)'''
+
+'''
+class ATM:
+
+    def __init__(self):
+        self.name="poo"
+        self._bank="SBI"
+        self.__pin=5861
+        self.balance=10
+        self.__address="herur"
+
+    def check_pin(self):
+        return self.__pin
+    
+    def withdraw(self,amount,pin):
+        if self.balance>0 and self.balance>=amount:
+            if self.__pin==pin:
+                self.balance-=amount
+            else:
+                print("incourrect pin")
+                self.balance=self.balance
+        else:
+            print("insufficient funds")
+        return self.balance
+    def deposite(self,amount,pin):
+        if self.__pin==pin:
+            self.balance+=amount
+            print("deposited successfuly")
+        else:
+            print('incurrect pin')
+        return self.balance
+    def change_pin(self,newpin):
+        self.__pin=newpin
+        print("pin change successfull",self.__pin)
+    def ministatement(self):
+        return f'Name is:{self.name},Bank is:{self._bank},pin is:{self.__pin},balance is:{self.balance}'
+o=ATM()
+print(o._ATM__pin)
+print(o._ATM__address)
+print(o.balance)
+print(o._bank)
+print(o.name)
+print(o.deposite(4500,5861))
+print(o.withdraw(1000,5861))
+o.change_pin(1234)
+print(o.ministatement())
+
+
+
+
+
+str="creamice"
+f=str[-4]
+s=str[-5]
+t=str[-6]
+fo=str[-7]
+fi=str[-8]
+si=str[-2]
+se=str[-1]
+print(f+s+t+fo+fi+si+se)'''
+
+class  Customerdetails:
+    def __init__(self,name,age,mobile_num,address,gmail):
+        self.name=name
+        self.age=age
+        self.mobile_num=mobile_num
+        self.address=address
+        self.gmail=gmail
+        self.amount=1000
+    def __str__(self):
+        return f'{self.name},{self.gmail}'
+class Moviedetails(Customerdetails):
+    queue=[]
+    def __init__(self,name,age,mobile_num,address,gmail,movie,seat_no,time,price):
+        super().__init__(name,age,mobile_num,address,gmail)
+        self.movie=movie
+        self.seat_no=seat_no
+        self.time=time
+        self.price=price
+        self.coupon_code='FREE123'
+    def __str__(self):
+        return f'{self.movie},{self.price},{self.time}'
+    
+    def booking(self):
+        status='third'
+        if status=='first':
+            price=500
+        if status=='second':
+            price=400
+        if status=='third':
+            price=300
+        return price
+    def billing(self,coupon_code):
+        if coupon_code==self.coupon_code:
+            discount=self.booking()-15*(self.booking())//100
+        else:
+            print('incurrect couponcode')
+            discount=0
+        return discount
+    def get_amount(self):
+        return self.amount
+    def cancelling(self):
+        cus_amount=self.amount
+        discount=self.billing('FREE123')
+        if self.amount>=discount:
+            print("booked successful")
+        else:
+            print("cancel booking")
+
+
+
+        
+c=Customerdetails('poo',21,'92710364','herur','poo@gmail.com')
+m=Moviedetails('poo',21,'92710364','herur','poo@gmail.com','kantara',40,'12.00 pm',500)
+print(f'actual price is:{m.booking()}')
+print(f'after 15% discount:{m.billing("FREE123")}')
+print(m.get_amount())
+m.cancelling()
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
